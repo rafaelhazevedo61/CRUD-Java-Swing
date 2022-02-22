@@ -9,6 +9,7 @@ import dao.UsersDAO;
 import javax.swing.JOptionPane;
 import model.Users;
 import view.ViewLogin;
+import view.ViewMain;
 
 /**
  *
@@ -21,6 +22,14 @@ public class ViewLoginController {
     //CONSTRUTOR
     public ViewLoginController(ViewLogin view) {
         this.view = view;
+    }
+
+    private void callNextView() {
+
+        ViewMain newView = new ViewMain();
+        newView.setVisible(true);
+        view.dispose();
+
     }
 
     private boolean login() {
@@ -53,6 +62,7 @@ public class ViewLoginController {
     public void loginButton() {
 
         login();
+        callNextView();
 
     }
 

@@ -39,9 +39,8 @@ public class ViewRead extends javax.swing.JFrame {
         jTableUsers = new javax.swing.JTable();
         jButtonRead = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Crud - Java Swing");
-        setMaximumSize(new java.awt.Dimension(452, 265));
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 153));
@@ -88,6 +87,7 @@ public class ViewRead extends javax.swing.JFrame {
             jTableUsers.getColumnModel().getColumn(4).setResizable(false);
         }
 
+        jButtonRead.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButtonRead.setText("Read");
         jButtonRead.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

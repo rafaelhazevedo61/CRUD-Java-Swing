@@ -46,7 +46,7 @@ public class ViewCreate extends javax.swing.JFrame {
         jButtonCreate = new javax.swing.JButton();
         jPasswordFieldPassword = new javax.swing.JPasswordField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Crud - Java Swing");
         setMaximumSize(new java.awt.Dimension(451, 79));
         setResizable(false);

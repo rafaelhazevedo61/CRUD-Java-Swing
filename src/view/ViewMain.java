@@ -5,17 +5,23 @@
  */
 package view;
 
+import controller.ViewMainController;
+import javax.swing.JButton;
+
 /**
  *
  * @author Rafael
  */
 public class ViewMain extends javax.swing.JFrame {
 
+    private final ViewMainController controller;
+
     /**
      * Creates new form ViewMain
      */
     public ViewMain() {
         initComponents();
+        controller = new ViewMainController(this);
     }
 
     /**
@@ -35,7 +41,6 @@ public class ViewMain extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Crud - Java Swing");
-        setMaximumSize(new java.awt.Dimension(230, 74));
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 153));
@@ -43,6 +48,11 @@ public class ViewMain extends javax.swing.JFrame {
 
         jButtonCreate.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButtonCreate.setText("Create");
+        jButtonCreate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCreateActionPerformed(evt);
+            }
+        });
 
         jButtonDelete.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButtonDelete.setText("Delete");
@@ -52,6 +62,11 @@ public class ViewMain extends javax.swing.JFrame {
 
         jButtonRead.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButtonRead.setText("Read");
+        jButtonRead.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonReadActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -97,6 +112,18 @@ public class ViewMain extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButtonCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreateActionPerformed
+
+        controller.createButton();
+
+    }//GEN-LAST:event_jButtonCreateActionPerformed
+
+    private void jButtonReadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonReadActionPerformed
+
+        controller.readButton();
+
+    }//GEN-LAST:event_jButtonReadActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -131,6 +158,31 @@ public class ViewMain extends javax.swing.JFrame {
             }
         });
     }
+
+    public JButton getjButtonCreate() {
+        return jButtonCreate;
+    }
+
+    public void setjButtonCreate(JButton jButtonCreate) {
+        this.jButtonCreate = jButtonCreate;
+    }
+
+    public JButton getjButtonDelete() {
+        return jButtonDelete;
+    }
+
+    public void setjButtonDelete(JButton jButtonDelete) {
+        this.jButtonDelete = jButtonDelete;
+    }
+
+    public JButton getjButtonUpdate() {
+        return jButtonUpdate;
+    }
+
+    public void setjButtonUpdate(JButton jButtonUpdate) {
+        this.jButtonUpdate = jButtonUpdate;
+    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCreate;
