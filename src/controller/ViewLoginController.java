@@ -23,7 +23,7 @@ public class ViewLoginController {
         this.view = view;
     }
 
-    public boolean login() {
+    private boolean login() {
 
         //GETTING VALUES OF VIEW
         String username = view.getjTextFieldUsername().getText();
