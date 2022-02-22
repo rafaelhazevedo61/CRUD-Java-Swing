@@ -5,17 +5,25 @@
  */
 package view;
 
+import controller.ViewLoginController;
+import javax.swing.JButton;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Rafael
  */
 public class ViewLogin extends javax.swing.JFrame {
 
+    private final ViewLoginController controller;
+
     /**
      * Creates new form TelaLogin
      */
     public ViewLogin() {
         initComponents();
+        controller = new ViewLoginController(this);
     }
 
     /**
@@ -35,12 +43,24 @@ public class ViewLogin extends javax.swing.JFrame {
         jButtonLogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Crud - Java Swing");
 
+        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
+
+        jLabelUsername.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabelUsername.setForeground(new java.awt.Color(255, 255, 0));
         jLabelUsername.setText("Username");
 
+        jLabelPassword.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabelPassword.setForeground(new java.awt.Color(255, 255, 0));
         jLabelPassword.setText("Password");
 
         jButtonLogin.setText("Login");
+        jButtonLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLoginActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -89,7 +109,14 @@ public class ViewLogin extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLoginActionPerformed
+
+        controller.loginButton();
+
+    }//GEN-LAST:event_jButtonLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -126,6 +153,31 @@ public class ViewLogin extends javax.swing.JFrame {
             }
         });
     }
+
+    public JButton getjButtonLogin() {
+        return jButtonLogin;
+    }
+
+    public void setjButtonLogin(JButton jButtonLogin) {
+        this.jButtonLogin = jButtonLogin;
+    }
+
+    public JPasswordField getjPasswordFieldPassword() {
+        return jPasswordFieldPassword;
+    }
+
+    public void setjPasswordFieldPassword(JPasswordField jPasswordFieldPassword) {
+        this.jPasswordFieldPassword = jPasswordFieldPassword;
+    }
+
+    public JTextField getjTextFieldUsername() {
+        return jTextFieldUsername;
+    }
+
+    public void setjTextFieldUsername(JTextField jTextFieldUsername) {
+        this.jTextFieldUsername = jTextFieldUsername;
+    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonLogin;
