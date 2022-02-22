@@ -91,7 +91,7 @@ public class UsersDAO {
         }
     }
 
-    public void insertUser(Users user) {
+    public void createUser(Users user) {
 
         //VALIDATION
         if (Text.isNullOrEmpty(user.getUsername())
@@ -114,6 +114,8 @@ public class UsersDAO {
             pst.setString(4, user.getEmail());
 
             pst.execute();
+
+            JOptionPane.showMessageDialog(null, "User created with sucess!");
 
         } catch (SQLException e) {
             Logger.getLogger(UsersDAO.class.getName()).log(Level.SEVERE, null, e);
@@ -160,7 +162,7 @@ public class UsersDAO {
 
     }
 
-    public List<Users> selectUsers() {
+    public List<Users> readUsers() {
 
         conn = ConnectionFactory.openConnection();
 

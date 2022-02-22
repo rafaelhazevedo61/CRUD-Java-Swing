@@ -67,7 +67,7 @@ public class UsersDAOTest {
 
         UsersDAO dao = new UsersDAO();
 
-        dao.insertUser(u);
+        dao.createUser(u);
 
         System.out.println("User inserted with sucess!");
 
@@ -95,7 +95,7 @@ public class UsersDAOTest {
 
         UsersDAO dao = new UsersDAO();
 
-        List<Users> list = dao.selectUsers();
+        List<Users> list = dao.readUsers();
 
         System.out.println(list);
 

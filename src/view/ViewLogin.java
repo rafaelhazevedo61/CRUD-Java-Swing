@@ -44,6 +44,8 @@ public class ViewLogin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Crud - Java Swing");
+        setMaximumSize(new java.awt.Dimension(297, 68));
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 153));
 
@@ -55,6 +57,7 @@ public class ViewLogin extends javax.swing.JFrame {
         jLabelPassword.setForeground(new java.awt.Color(255, 255, 0));
         jLabelPassword.setText("Password");
 
+        jButtonLogin.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButtonLogin.setText("Login");
         jButtonLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
