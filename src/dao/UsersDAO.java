@@ -84,6 +84,8 @@ public class UsersDAO {
 
             pst.execute();
 
+            JOptionPane.showMessageDialog(null, "User deleted with sucess!");
+
         } catch (SQLException e) {
             Logger.getLogger(UsersDAO.class.getName()).log(Level.SEVERE, null, e);
         } finally {
@@ -152,7 +154,7 @@ public class UsersDAO {
 
             pst.executeUpdate();
 
-            JOptionPane.showMessageDialog(null, "The selected register was updated!");
+            JOptionPane.showMessageDialog(null, "The selected register was updated with sucess!");
 
         } catch (SQLException e) {
             Logger.getLogger(UsersDAO.class.getName()).log(Level.SEVERE, null, e);

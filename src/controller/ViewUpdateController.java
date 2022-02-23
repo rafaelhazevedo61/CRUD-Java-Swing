@@ -6,7 +6,6 @@
 package controller;
 
 import dao.UsersDAO;
-import javax.swing.JPasswordField;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;

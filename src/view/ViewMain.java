@@ -56,9 +56,19 @@ public class ViewMain extends javax.swing.JFrame {
 
         jButtonDelete.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButtonDelete.setText("Delete");
+        jButtonDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDeleteActionPerformed(evt);
+            }
+        });
 
         jButtonUpdate.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButtonUpdate.setText("Update");
+        jButtonUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonUpdateActionPerformed(evt);
+            }
+        });
 
         jButtonRead.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButtonRead.setText("Read");
@@ -123,6 +133,18 @@ public class ViewMain extends javax.swing.JFrame {
         controller.readButton();
 
     }//GEN-LAST:event_jButtonReadActionPerformed
+
+    private void jButtonUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUpdateActionPerformed
+
+        controller.updateButton();
+
+    }//GEN-LAST:event_jButtonUpdateActionPerformed
+
+    private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
+
+        controller.deleteButton();
+
+    }//GEN-LAST:event_jButtonDeleteActionPerformed
 
     /**
      * @param args the command line arguments
