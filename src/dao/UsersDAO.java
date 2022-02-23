@@ -129,7 +129,6 @@ public class UsersDAO {
 
         //VALIDATION
         if (Text.isNullOrEmpty(user.getUsername())
-                || Text.isNullOrEmpty(user.getPassword())
                 || Text.isNullOrEmpty(user.getName())) {
 
             JOptionPane.showMessageDialog(null, "Campo obrigatório não preenchido!");
@@ -140,19 +139,20 @@ public class UsersDAO {
 
         try {
 
-            String sql = "update users set username=?,password=?,name=?,email=? where coduser=?";
+            String sql = "update users set username=?,name=?,email=? where coduser=?";
 
             pst = conn.prepareStatement(sql);
 
             pst.setString(1, user.getUsername());
-            pst.setString(2, user.getPassword());
-            pst.setString(3, user.getName());
-            pst.setString(4, user.getEmail());
-            pst.setInt(5, user.getCoduser());
+            pst.setString(2, user.getName());
+            pst.setString(3, user.getEmail());
+            pst.setInt(4, user.getCoduser());
 
             System.out.println(pst);
 
             pst.executeUpdate();
+
+            JOptionPane.showMessageDialog(null, "The selected register was updated!");
 
         } catch (SQLException e) {
             Logger.getLogger(UsersDAO.class.getName()).log(Level.SEVERE, null, e);

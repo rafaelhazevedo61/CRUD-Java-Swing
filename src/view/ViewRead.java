@@ -52,14 +52,14 @@ public class ViewRead extends javax.swing.JFrame {
 
             },
             new String [] {
-                "COD", "USERNAME", "PASSWORD", "NAME", "SENHA"
+                "COD", "USERNAME", "NAME", "SENHA"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -84,7 +84,6 @@ public class ViewRead extends javax.swing.JFrame {
             jTableUsers.getColumnModel().getColumn(1).setResizable(false);
             jTableUsers.getColumnModel().getColumn(2).setResizable(false);
             jTableUsers.getColumnModel().getColumn(3).setResizable(false);
-            jTableUsers.getColumnModel().getColumn(4).setResizable(false);
         }
 
         jButtonRead.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
